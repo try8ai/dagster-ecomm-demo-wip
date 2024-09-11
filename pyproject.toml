@@ -3,8 +3,8 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.dagster]
-module_name = "dagster_quickstart.definitions"
-code_location_name = "dagster_quickstart"
+module_name = "dagster_ecommerce.definitions"
+code_location_name = "dagster_ecommerce"
 
 [tool.ruff]
 
