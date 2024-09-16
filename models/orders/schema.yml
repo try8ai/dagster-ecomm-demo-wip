@@ -1,0 +1,31 @@
+version: 2
+sources:
+  - name: orders
+    schema: main
+    tables:
+      - name: orders
+        columns:
+          - name: order_id
+          - name: created_at
+          - name: currency_code
+          - name: receipt_number
+          - name: total_gross
+          - name: total_tax
+          - name: total_net
+          - name: payment_method
+          - name: paid_amount
+          - name: customer_id
+
+models:
+  - name: orders_transformed
+    columns:
+      - name: order_id
+      - name: created_at
+      - name: currency_code
+      - name: receipt_number
+      - name: total_gross
+      - name: total_tax
+      - name: total_net
+      - name: payment_method
+      - name: paid_amount
+      - name: customer_id

@@ -1,0 +1,8 @@
+default:
+  outputs:
+    dev:
+      type: duckdb
+      path: duckdb.duckdb
+      extensions:
+        - parquet
+  target: dev

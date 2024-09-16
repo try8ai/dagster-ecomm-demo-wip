@@ -1,0 +1,6 @@
+name: dagster
+profile: default
+model-paths: ["models"]
+models:
+  orders:
+    +materialized: view
