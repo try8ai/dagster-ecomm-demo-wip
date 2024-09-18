@@ -2,43 +2,48 @@
 
 ## Local Setup
 
-### Build the docker container
+### Build & run the demo container
+
+In your terminal run
 ```
 $ docker build -t dagster-ecomm .
-```
-### Run & enter the container
-```
 $ docker run -it -p 3000:3000 -p 5000:5000 dagster-ecomm /bin/bash
 ```
-### Get project
+
+### Get project & start dagster server
+
+In the demo container run
 ```
 $ git clone https://github.com/try8ai/dagster-ecomm-demo-internal
 $ cd dagster-ecomm-demo-internal
+$ dagster dev -h 0.0.0.0
 ```
-### Start dagster server
-```
-dagster dev -h 0.0.0.0
-```
+
 ### Materialize assets
+
 * In your browser, navigate to [localhost:3000](http://localhost:3000)
 * Select *Assets*
 * Select *View global asset lineage*
 * Select *Materialize All*
-### Start a new terminal in the container
+
+### Start a new terminal in the demo container
+
+In a new terminal run
 ```
-$ docker container ls
-$ docker exec -it <container_id> /bin/bash
+$ docker exec -it $(docker container ls | grep dagster-ecomm | awk '{ print $1 }') /bin/bash
 ```
-### Run dbt
+
+### Run dbt & superset
+
+In the new terminal in the demo container run
 ```
 $ dbt run
-```
-### Run superset
-```
 $ cd /superset
 $ FLASK_APP=superset SUPERSET_CONFIG_PATH=superset_config.py superset run -h 0.0.0.0
 ```
+
 ### Launch the superset UI
+
 * In your browser, navigate to [localhost:5000](http://localhost:5000)
 * Login Credentials: `admin:admin`
 * Click the '+' icon in top right
