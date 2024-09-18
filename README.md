@@ -29,8 +29,8 @@ $ dagster dev -h 0.0.0.0 > /dev/null 2>&1 &
 ### Run dbt & superset
 ```
 $ dbt run
-$ cd /superset
-$ FLASK_APP=superset SUPERSET_CONFIG_PATH=superset_config.py superset run -h 0.0.0.0
+$ cd /home/dagster/superset
+$ superset run -h 0.0.0.0 > /dev/null 2>&1 &
 ```
 
 ### Launch the superset UI
