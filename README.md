@@ -10,13 +10,16 @@ $ docker build -t dagster-ecomm .
 $ docker run -it -p 13000:13000 -p 15000:15000 dagster-ecomm /bin/bash
 ```
 
-### Get project & start dagster server
+### Clone Project
 
 In the demo container run
 ```
-$ git clone https://github.com/try8ai/dagster-ecomm-demo-internal
-$ cd dagster-ecomm-demo-internal
-$ dagster dev -h 0.0.0.0 -p 13000 > /dev/null 2>&1 &
+git clone https://github.com/try8ai/dagster-ecomm-demo-internal && cd dagster-ecomm-demo-internal
+```
+
+### Start Dagster Server
+```
+dagster dev -h 0.0.0.0 -p 13000 > /dev/null 2>&1 &
 ```
 
 ### Materialize assets
