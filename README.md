@@ -29,11 +29,14 @@ dagster dev -h 0.0.0.0 -p 13000 > /dev/null 2>&1 &
 * Select *View global asset lineage*
 * Select *Materialize All*
 
-### Run dbt & superset
+### Run dbt
 ```
-$ dbt run
-$ cd /home/dagster/superset
-$ superset run -h 0.0.0.0 -p 15000 > /dev/null 2>&1 &
+dbt run
+```
+
+### Run superset
+```
+cd /home/dagster/superset && superset run -h 0.0.0.0 -p 15000 > /dev/null 2>&1 &
 ```
 
 ### Launch the superset UI
