@@ -16,7 +16,7 @@ In the demo container run
 ```
 $ git clone https://github.com/try8ai/dagster-ecomm-demo-internal
 $ cd dagster-ecomm-demo-internal
-$ dagster dev -h 0.0.0.0 2>/dev/null 1>&2 &
+$ dagster dev -h 0.0.0.0 > /dev/null 2>&1 &
 ```
 
 ### Materialize assets
