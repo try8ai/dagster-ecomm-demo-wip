@@ -16,7 +16,7 @@ In the demo container run
 ```
 $ git clone https://github.com/try8ai/dagster-ecomm-demo-internal
 $ cd dagster-ecomm-demo-internal
-$ dagster dev -h 0.0.0.0
+$ dagster dev -h 0.0.0.0 2>/dev/null 1>&2 &
 ```
 
 ### Materialize assets
@@ -26,16 +26,7 @@ $ dagster dev -h 0.0.0.0
 * Select *View global asset lineage*
 * Select *Materialize All*
 
-### Start a new terminal in the demo container
-
-In a new terminal run
-```
-$ docker exec -it $(docker container ls | grep dagster-ecomm | awk '{ print $1 }') /bin/bash
-```
-
 ### Run dbt & superset
-
-In the new terminal in the demo container run
 ```
 $ dbt run
 $ cd /superset
