@@ -4,12 +4,12 @@
 
 ### Build the demo container
 ```
-$ docker build -t dagster-ecomm .
+docker build -t dagster-ecomm .
 ```
 
 ### Run the demo container
 ```
-$ docker run -it -p 13000:13000 -p 15000:15000 dagster-ecomm /bin/bash
+docker run -it -p 13000:13000 -p 15000:15000 dagster-ecomm /bin/bash
 ```
 
 ### Clone Project
