@@ -16,7 +16,7 @@ docker run -it -p 13000:13000 -p 15000:15000 dagster-ecomm /bin/bash
 
 In the demo container run
 ```
-git clone https://github.com/try8ai/dagster-ecomm-demo-internal && cd dagster-ecomm-demo-internal
+git clone https://github.com/try8ai/dagster-ecomm-demo-wip && cd dagster-ecomm-demo-wip
 ```
 
 ### Start Dagster Server
