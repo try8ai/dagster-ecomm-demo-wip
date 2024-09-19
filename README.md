@@ -48,6 +48,6 @@ cd /home/dagster/superset && superset run -h 0.0.0.0 -p 15000 > /dev/null 2>&1 &
 * Click the '+' icon in top right
 * Select `Data` -> `Connect database`
 * Type is "Other"
-* SQLAlchemy URI: `duckdb:////home/dagster/dagster-ecomm-demo-internal/duckdb.duckdb`
+* SQLAlchemy URI: `duckdb:////home/dagster/dagster-ecomm-demo-wip/duckdb.duckdb`
 
 From here you are able to create visualizations of the data
