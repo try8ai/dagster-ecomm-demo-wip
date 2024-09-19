@@ -2,11 +2,13 @@
 
 ## Local Setup
 
-### Build & run the demo container
-
-In your terminal run
+### Build the demo container
 ```
 $ docker build -t dagster-ecomm .
+```
+
+### Run the demo container
+```
 $ docker run -it -p 13000:13000 -p 15000:15000 dagster-ecomm /bin/bash
 ```
 
