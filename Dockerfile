@@ -12,7 +12,7 @@ RUN python3 -m venv /tmp/venv
 ENV PATH="/tmp/venv/bin:$PATH"
 
 RUN pip3 install --upgrade pip
-RUN pip3 install dagster dagster-webserver dagster_duckdb duckdb dbt-duckdb 'apache-superset>=4.0,<4.1' duckdb-engine
+RUN pip3 install dagster dagster-webserver dagster_duckdb duckdb dbt-duckdb 'apache-superset>=4.0,<4.1' duckdb-engine dagster-dbt
 
 WORKDIR /home/dagster/superset
 
